@@ -23,6 +23,10 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 
+;; Line numbers
+(add-hook 'prog-mode-hook 'linum-mode)
+
+;; Font
 (when (window-system)
   (set-frame-font "FreeMono-12"))
 
