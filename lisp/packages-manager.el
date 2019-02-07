@@ -1,3 +1,8 @@
+;;; packages-manager.el --- Package manager basic configuration
+
+;;; Commentary:
+;;; Code:
+
 (require 'package)
 (setq package-archives '(("org"       . "http://orgmode.org/elpa/")
                          ("gnu"       . "http://elpa.gnu.org/packages/")
@@ -10,3 +15,9 @@
   (package-install 'use-package))
 
 (provide 'packages-manager)
+
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
+
+;;; packages-manager.el ends here

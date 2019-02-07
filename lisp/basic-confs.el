@@ -1,3 +1,8 @@
+;;; basic-confs.el --- Per-package confs with use-package tool
+
+;;; Commentary:
+;;; Code:
+
 ;; No useless bars
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -18,3 +23,9 @@
 (setq show-paren-delay 0)
 
 (provide 'basic-confs)
+
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
+
+;;; basic-confs.el ends here

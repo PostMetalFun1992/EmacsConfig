@@ -1,3 +1,8 @@
+;;; packages-confs.el --- Per-package confs with use-package tool
+
+;;; Commentary:
+;;; Code:
+
 (use-package solarized-theme
   :ensure t
   :config
@@ -18,4 +23,15 @@
   :config
   (smartparens-global-mode 1))
 
+(use-package flycheck
+  :ensure t
+  :init
+  (add-hook 'after-init-hook #'global-flycheck-mode))
+
 (provide 'packages-confs)
+
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
+
+;;; packages-confs.el ends here
