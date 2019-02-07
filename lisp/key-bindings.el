@@ -12,6 +12,9 @@
 (global-set-key (kbd "C-x <right>") 'next-multiframe-window)
 (global-set-key (kbd "C-x h") 'helm-imenu)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "C-x g") 'goto-line)
+(global-set-key (kbd "C-<down>") 'scroll-up-line)
+(global-set-key (kbd "C-<up>") 'scroll-down-line)
 
 (defun add-python-specific-keys ()
   "Add python specific keybindings."
