@@ -25,6 +25,9 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 
+(when (window-system)
+  (set-frame-font "FreeMono-12"))
+
 (provide 'basic-confs)
 
 ;; Local Variables:
