@@ -1,5 +1,6 @@
+.cache/
+.python-environments/
 auto-save-list/
 elpa/
 network-security.data
 custom.el
-.cache/

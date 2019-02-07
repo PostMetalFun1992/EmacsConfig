@@ -50,6 +50,17 @@
 (use-package py-yapf
   :ensure t)
 
+(use-package company-jedi
+  :ensure t)
+
+(use-package company
+  :after (company-jedi)
+  :ensure t
+  :config
+  (setq company-idle-delay 0)
+  (add-hook 'after-init-hook 'global-company-mode)
+  (add-to-list 'company-backends 'company-jedi))
+
 (provide 'packages-confs)
 
 ;; Local Variables:
