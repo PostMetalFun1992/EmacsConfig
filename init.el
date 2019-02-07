@@ -1,10 +1,5 @@
-;; Set global conf folder
-(defconst emacs-conf-dir (concat (getenv "HOME") "/.emacs.d/"))
-
-;; Set custom file
-(setq custom-file (expand-file-name "custom.el" emacs-conf-dir))
-(when (file-exists-p custom-file)
-  (load custtom-file))
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
 
 ;; No useless bars
 (menu-bar-mode -1)
@@ -46,7 +41,8 @@
   :config
   (progn
     (setq treemacs-show-hidden-files t
-	  treemacs-sorting 'alphabetic-desc))
-  :bind
-  (:map global-map
-        ("C-x t t" . treemacs)))
+	  treemacs-sorting 'alphabetic-desc)))
+
+(global-set-key (kbd "C-t") 'treemacs)
+(global-set-key (kbd "C-x <left>") 'previous-multiframe-window)
+(global-set-key (kbd "C-x <right>") 'next-multiframe-window)
