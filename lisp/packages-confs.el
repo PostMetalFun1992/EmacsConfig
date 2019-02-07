@@ -1,5 +1,7 @@
 (use-package solarized-theme
-  :ensure t)
+  :ensure t
+  :config
+  (load-theme 'solarized-dark t))
 
 (use-package helm
   :ensure t)
