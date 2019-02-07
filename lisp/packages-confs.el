@@ -33,6 +33,14 @@
   :init
   (global-diff-hl-mode))
 
+(use-package highlight-indent-guides
+  :ensure t
+  :init
+  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+  (setq highlight-indent-guides-method 'character)
+  (setq highlight-indent-guides-character ?\|)
+  (setq highlight-indent-guides-delay 0))
+
 (provide 'packages-confs)
 
 ;; Local Variables:
