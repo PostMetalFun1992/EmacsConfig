@@ -10,6 +10,8 @@
 (global-set-key (kbd "C-x <left>") 'previous-multiframe-window)
 (global-set-key (kbd "C-x <right>") 'next-multiframe-window)
 
+(define-key python-mode-map (kbd "f f") 'py-yapf-buffer)
+
 (provide 'key-bindings)
 
 ;; Local Variables:

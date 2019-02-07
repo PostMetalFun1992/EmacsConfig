@@ -42,6 +42,9 @@
   (setq highlight-indent-guides-character ?\|)
   (setq highlight-indent-guides-delay 0))
 
+(use-package py-yapf
+  :ensure t)
+
 (provide 'packages-confs)
 
 ;; Local Variables:
