@@ -3,11 +3,21 @@
 ;;; Commentary:
 ;;; Code:
 
+;; UI
 (use-package solarized-theme
   :ensure t
   :config
   (load-theme 'solarized-dark t))
 
+(use-package highlight-indent-guides
+  :ensure t
+  :config
+  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+  (setq highlight-indent-guides-method 'character)
+  (setq highlight-indent-guides-character ?\|)
+  (setq highlight-indent-guides-delay 0))
+
+;; Additional components
 (use-package helm
   :ensure t
   :config
@@ -23,33 +33,29 @@
     (setq treemacs-show-hidden-files t
 	  treemacs-sorting 'alphabetic-desc)))
 
+;; Git
+(use-package diff-hl
+  :ensure t
+  :config
+  (global-diff-hl-mode))
+
+;; Text manipulation
 (use-package smartparens
   :ensure t
   :config
   (smartparens-global-mode 1))
 
+(use-package py-yapf
+  :ensure t)
+
+;; Linting
 (use-package flycheck
   :ensure t
   :config
   (add-hook 'after-init-hook #'global-flycheck-mode)
   (setq flycheck-python-flake8-executable "python3"))
 
-(use-package diff-hl
-  :ensure t
-  :config
-  (global-diff-hl-mode))
-
-(use-package highlight-indent-guides
-  :ensure t
-  :config
-  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-  (setq highlight-indent-guides-method 'character)
-  (setq highlight-indent-guides-character ?\|)
-  (setq highlight-indent-guides-delay 0))
-
-(use-package py-yapf
-  :ensure t)
-
+;; Autocomplete
 (use-package company-jedi
   :ensure t)
 

@@ -19,7 +19,7 @@
 (setq auto-save-default nil)
 (setq backup-inhibited t)
 
-;; Pairs
+;; Highlight pairs
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 

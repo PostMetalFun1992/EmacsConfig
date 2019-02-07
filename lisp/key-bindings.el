@@ -21,8 +21,7 @@
 (global-set-key (kbd "C-<down>") 'scroll-up-line)
 (global-set-key (kbd "C-<up>") 'scroll-down-line)
 
-
-
+;; Python - specific
 (defun add-python-specific-keys ()
   "Add python specific keybindings."
   (local-set-key (kbd "C-x f") 'py-yapf-buffer))
