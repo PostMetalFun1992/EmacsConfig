@@ -7,11 +7,16 @@
 ;;; Code:
 
 ;; Global keys
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
+
 (global-set-key (kbd "C-x t") 'treemacs)
+
 (global-set-key (kbd "C-x <left>") 'previous-multiframe-window)
 (global-set-key (kbd "C-x <right>") 'next-multiframe-window)
+
 (global-set-key (kbd "C-x h") 'helm-imenu)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
+
 (global-set-key (kbd "C-x g") 'goto-line)
 (global-set-key (kbd "C-<down>") 'scroll-up-line)
 (global-set-key (kbd "C-<up>") 'scroll-down-line)
