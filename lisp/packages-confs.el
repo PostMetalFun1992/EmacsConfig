@@ -11,4 +11,9 @@
     (setq treemacs-show-hidden-files t
 	  treemacs-sorting 'alphabetic-desc)))
 
+(use-package smartparens
+  :ensure t
+  :config
+  (smartparens-global-mode 1))
+
 (provide 'packages-confs)
