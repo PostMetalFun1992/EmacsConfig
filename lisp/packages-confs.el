@@ -26,7 +26,8 @@
 (use-package flycheck
   :ensure t
   :init
-  (add-hook 'after-init-hook #'global-flycheck-mode))
+  (add-hook 'after-init-hook #'global-flycheck-mode)
+  (setq flycheck-python-flake8-executable "python3"))
 
 (use-package diff-hl
   :ensure t
