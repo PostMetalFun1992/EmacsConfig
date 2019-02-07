@@ -1,5 +1,8 @@
+;; Additional load paths
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
+
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 
 ;; No useless bars
 (menu-bar-mode -1)
@@ -43,6 +46,4 @@
     (setq treemacs-show-hidden-files t
 	  treemacs-sorting 'alphabetic-desc)))
 
-(global-set-key (kbd "C-t") 'treemacs)
-(global-set-key (kbd "C-x <left>") 'previous-multiframe-window)
-(global-set-key (kbd "C-x <right>") 'next-multiframe-window)
+(require 'key-bindings)
