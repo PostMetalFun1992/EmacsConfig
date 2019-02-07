@@ -28,6 +28,11 @@
   :init
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
+(use-package diff-hl
+  :ensure t
+  :init
+  (global-diff-hl-mode))
+
 (provide 'packages-confs)
 
 ;; Local Variables:
