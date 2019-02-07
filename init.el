@@ -19,6 +19,10 @@
 ;; Line numbers
 (global-linum-mode t)
 
+;; Pairs
+(show-paren-mode 1)
+(setq show-paren-delay 0)
+
 ;; Package-el config
 (require 'package)
 (setq package-archives '(("org"       . "http://orgmode.org/elpa/")
@@ -31,19 +35,5 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
-(require 'use-package)
-
-(use-package solarized-theme
-  :ensure t)
-
-(use-package helm
-  :ensure t)
-
-(use-package treemacs
-  :ensure t
-  :config
-  (progn
-    (setq treemacs-show-hidden-files t
-	  treemacs-sorting 'alphabetic-desc)))
-
+(require 'packages-confs)
 (require 'key-bindings)
