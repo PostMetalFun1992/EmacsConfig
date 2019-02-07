@@ -9,7 +9,12 @@
   (load-theme 'solarized-dark t))
 
 (use-package helm
-  :ensure t)
+  :ensure t
+  :config
+  (helm-autoresize-mode 1)
+  (setq helm-autoresize-max-height 0)
+  (setq helm-autoresize-max-height 40)
+  (setq helm-split-window-inside-p t))
 
 (use-package treemacs
   :ensure t
@@ -25,18 +30,18 @@
 
 (use-package flycheck
   :ensure t
-  :init
+  :config
   (add-hook 'after-init-hook #'global-flycheck-mode)
   (setq flycheck-python-flake8-executable "python3"))
 
 (use-package diff-hl
   :ensure t
-  :init
+  :config
   (global-diff-hl-mode))
 
 (use-package highlight-indent-guides
   :ensure t
-  :init
+  :config
   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
   (setq highlight-indent-guides-method 'character)
   (setq highlight-indent-guides-character ?\|)
