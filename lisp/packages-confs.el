@@ -47,6 +47,13 @@
   (setq highlight-indent-guides-character ?\|)
   (setq highlight-indent-guides-delay 0))
 
+(use-package fill-column-indicator
+  :ensure t
+  :config
+  (add-hook 'python-mode-hook (lambda ()
+				(setq fci-rule-column 80)
+				(fci-mode 1))))
+
 (use-package py-yapf
   :ensure t)
 
