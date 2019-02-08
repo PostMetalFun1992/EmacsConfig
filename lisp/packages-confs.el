@@ -37,7 +37,8 @@
 (use-package diff-hl
   :ensure t
   :config
-  (global-diff-hl-mode))
+  (global-diff-hl-mode)
+  (diff-hl-flydiff-mode))
 
 ;; Text manipulation
 (use-package smartparens
@@ -52,8 +53,10 @@
 (use-package flycheck
   :ensure t
   :config
-  (add-hook 'after-init-hook #'global-flycheck-mode)
-  (setq flycheck-python-flake8-executable "python3"))
+  (setq flycheck-python-flake8-executable "python3")
+  :hook
+  (emacs-lisp-mode . flycheck-mode)
+  (python-mode . flycheck-mode))
 
 ;; Autocomplete
 (use-package company-jedi
@@ -67,8 +70,10 @@
   (setq company-minimum-prefix-length 1)
   (setq company-selection-wrap-around t)
   (company-tng-configure-default)
-  (add-hook 'after-init-hook 'global-company-mode)
-  (add-to-list 'company-backends 'company-jedi))
+  (add-to-list 'company-backends 'company-jedi)
+  :hook
+  (python-mode . company-mode)
+  (emacs-lisp-mode . company-mode))
 
 (provide 'packages-confs)
 
