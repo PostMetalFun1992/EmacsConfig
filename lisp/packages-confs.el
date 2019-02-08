@@ -54,6 +54,7 @@
   :ensure t
   :config
   (setq flycheck-python-flake8-executable "python3")
+  (setq flycheck-emacs-lisp-load-path 'inherit)
   :hook
   (emacs-lisp-mode . flycheck-mode)
   (python-mode . flycheck-mode))
