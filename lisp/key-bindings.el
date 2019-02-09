@@ -21,12 +21,17 @@
 (global-set-key (kbd "C-<down>") 'scroll-up-line)
 (global-set-key (kbd "C-<up>") 'scroll-down-line)
 
-;; Python - specific
 (defun add-python-specific-keys ()
   "Add python specific keybindings."
   (local-set-key (kbd "C-x f") 'py-yapf-buffer))
 
 (add-hook 'python-mode-hook 'add-python-specific-keys)
+
+(defun add-haskell-specific-keys ()
+  "Add haskell specific keybindings."
+  (local-set-key (kbd "C-x f") 'haskell-mode-stylish-buffer))
+
+(add-hook 'haskell-mode-hook 'add-haskell-specific-keys)
 
 (provide 'key-bindings)
 

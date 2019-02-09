@@ -57,6 +57,9 @@
   :hook
   (yaml-mode . linum-mode))
 
+(use-package haskell-mode
+  :ensure t)
+
 ;; Linting
 (use-package flycheck
   :ensure t
