@@ -1,4 +1,4 @@
-;;; packages-confs.el --- Per-package confs with use-package tool
+;;; packages-basic.el --- Per-package confs with use-package tool
 
 ;;; Commentary:
 ;;; Code:
@@ -61,10 +61,10 @@
   (emacs-lisp-mode . flycheck-mode)
   (python-mode . flycheck-mode))
 
-(provide 'packages-confs)
+(provide 'packages-basic)
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
 
-;;; packages-confs.el ends here
+;;; packages-basic.el ends here

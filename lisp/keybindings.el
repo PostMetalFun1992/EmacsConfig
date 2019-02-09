@@ -1,4 +1,4 @@
-;;; key-bindings.el --- Global keybindings space
+;;; keybindings.el --- Global keybindings space
 
 ;;; Commentary:
 
@@ -33,10 +33,10 @@
 
 (add-hook 'haskell-mode-hook 'add-haskell-specific-keys)
 
-(provide 'key-bindings)
+(provide 'keybindings)
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
 
-;;; key-bindings.el ends here
+;;; keybindings.el ends here

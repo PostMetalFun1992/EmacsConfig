@@ -1,4 +1,4 @@
-;;; packages-autocomplete.el --- Configure company mode
+;;; packages-company.el --- Company mode setup
 
 ;;; Commentary:
 ;;; Code:
@@ -25,10 +25,10 @@
   (emacs-lisp-mode . company-mode)
   (js2-mode . company-mode))
 
-(provide 'packages-autocomplete)
+(provide 'packages-company)
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
 
-;;; packages-autocomplete.el ends here
+;;; packages-company.el ends here

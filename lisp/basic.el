@@ -1,4 +1,4 @@
-;;; basic-confs.el --- Per-package confs with use-package tool
+;;; basic.el --- Core emacs settings
 
 ;;; Commentary:
 ;;; Code:
@@ -30,10 +30,10 @@
 (when (window-system)
   (set-frame-font "FreeMono-12"))
 
-(provide 'basic-confs)
+(provide 'basic)
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
 
-;;; basic-confs.el ends here
+;;; basic.el ends here

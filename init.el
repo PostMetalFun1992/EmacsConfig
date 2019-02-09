@@ -10,13 +10,13 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
-(require 'basic-confs)
+(require 'basic)
 (require 'packages-manager)
 (require 'packages-modes)
-(require 'packages-confs)
-(require 'packages-autocomplete)
-(require 'customizations)
-(require 'key-bindings)
+(require 'packages-basic)
+(require 'packages-company)
+(require 'indents)
+(require 'keybindings)
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
