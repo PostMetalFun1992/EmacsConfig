@@ -11,9 +11,9 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 (require 'basic-confs)
-(require 'customizations)
 (require 'packages-manager)
 (require 'packages-confs)
+(require 'customizations)
 (require 'key-bindings)
 
 ;; Local Variables:
