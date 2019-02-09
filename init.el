@@ -12,7 +12,9 @@
 
 (require 'basic-confs)
 (require 'packages-manager)
+(require 'packages-modes)
 (require 'packages-confs)
+(require 'packages-autocomplete)
 (require 'customizations)
 (require 'key-bindings)
 
