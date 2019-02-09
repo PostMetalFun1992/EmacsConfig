@@ -12,10 +12,12 @@
 (use-package highlight-indent-guides
   :ensure t
   :config
-  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
   (setq highlight-indent-guides-method 'character)
   (setq highlight-indent-guides-character ?\|)
-  (setq highlight-indent-guides-delay 0))
+  (setq highlight-indent-guides-delay 0)
+  :hook
+  (prog-mode . highlight-indent-guides-mode)
+  (yaml-mode . highlight-indent-guides-mode))
 
 ;; Additional components
 (use-package helm
