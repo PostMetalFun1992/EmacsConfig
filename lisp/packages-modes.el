@@ -19,7 +19,7 @@
 (use-package rjsx-mode
   :ensure t
   :config
-  (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode)))
+  (add-to-list 'auto-mode-alist '("\\.jsx\\'" . rjsx-mode)))
 
 (provide 'packages-modes)
 
