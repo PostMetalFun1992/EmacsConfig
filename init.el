@@ -5,7 +5,8 @@
 
 ;; Additional load paths
 (setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+(when (file-exists-p custom-file)
+  (load custom-file))
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
