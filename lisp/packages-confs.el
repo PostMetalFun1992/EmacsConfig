@@ -49,6 +49,12 @@
 (use-package py-yapf
   :ensure t)
 
+;; Additional modes
+(use-package yaml-mode
+  :ensure t
+  :hook
+  (yaml-mode . linum-mode))
+
 ;; Linting
 (use-package flycheck
   :ensure t
