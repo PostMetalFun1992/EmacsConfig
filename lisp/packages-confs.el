@@ -60,6 +60,16 @@
 (use-package haskell-mode
   :ensure t)
 
+(use-package js2-mode
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)))
+
+(use-package rjsx-mode
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode)))
+
 ;; Linting
 (use-package flycheck
   :ensure t
@@ -74,8 +84,12 @@
 (use-package company-jedi
   :ensure t)
 
+(use-package company-tern
+  :ensure t)
+
 (use-package company
-  :after (company-jedi)
+  :after
+  (company-jedi company-tern)
   :ensure t
   :config
   (setq company-idle-delay 0)
@@ -83,9 +97,11 @@
   (setq company-selection-wrap-around t)
   (company-tng-configure-default)
   (add-to-list 'company-backends 'company-jedi)
+  (add-to-list 'company-backends 'company-tern)
   :hook
   (python-mode . company-mode)
-  (emacs-lisp-mode . company-mode))
+  (emacs-lisp-mode . company-mode)
+  (js2-mode . company-mode))
 
 (provide 'packages-confs)
 
