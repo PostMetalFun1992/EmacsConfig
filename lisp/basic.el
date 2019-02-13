@@ -28,7 +28,7 @@
 
 ;; Font
 (when (window-system)
-  (set-frame-font "FreeMono-12"))
+  (set-frame-font "FiraCode Retina-12"))
 
 (provide 'basic)
 
