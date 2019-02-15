@@ -30,6 +30,9 @@
 (when (window-system)
   (set-frame-font "FiraCode Retina-12"))
 
+;; Enable upcate region
+(put 'upcase-region 'disabled nil)
+
 (provide 'basic)
 
 ;; Local Variables:
