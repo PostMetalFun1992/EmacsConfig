@@ -5,12 +5,9 @@
 
 ;; UI
 (use-package solarized-theme
-  :ensure t)
-
-(use-package gruvbox-theme
   :ensure t
   :config
-  (load-theme 'gruvbox t))
+  (load-theme 'solarized-dark t))
 
 (use-package highlight-indent-guides
   :ensure t
@@ -20,7 +17,8 @@
   (setq highlight-indent-guides-delay 0)
   :hook
   (prog-mode . highlight-indent-guides-mode)
-  (yaml-mode . highlight-indent-guides-mode))
+  (yaml-mode . highlight-indent-guides-mode)
+  (haskell-cabal-mode . highlight-indent-guides-mode))
 
 ;; Additional components
 (use-package helm

@@ -9,7 +9,9 @@
   (yaml-mode . linum-mode))
 
 (use-package haskell-mode
-  :ensure t)
+  :ensure t
+  :hook
+  (haskell-cabal-mode . linum-mode))
 
 (use-package js2-mode
   :ensure t
