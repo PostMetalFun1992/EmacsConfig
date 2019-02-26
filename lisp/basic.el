@@ -28,7 +28,7 @@
 
 ;; Font
 (when (window-system)
-  (set-frame-font "FiraCode Retina-12"))
+  (set-frame-font "FreeMono-14"))
 
 ;; Enable upcate region
 (put 'upcase-region 'disabled nil)

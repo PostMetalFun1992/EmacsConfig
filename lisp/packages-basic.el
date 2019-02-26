@@ -5,9 +5,12 @@
 
 ;; UI
 (use-package solarized-theme
+  :ensure t)
+
+(use-package ample-theme
   :ensure t
   :config
-  (load-theme 'solarized-dark t))
+  (load-theme 'ample t))
 
 (use-package highlight-indent-guides
   :ensure t
