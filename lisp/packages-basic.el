@@ -23,6 +23,13 @@
   (yaml-mode . highlight-indent-guides-mode)
   (haskell-cabal-mode . highlight-indent-guides-mode))
 
+(use-package spaceline
+  :ensure t
+  :config
+  (setq-default mode-line-format '("%e" (:eval (spaceline-ml-main))))
+  (spaceline-helm-mode 1)
+  (spaceline-emacs-theme))
+
 ;; Additional components
 (use-package helm
   :ensure t
