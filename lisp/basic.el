@@ -30,8 +30,9 @@
 (when (window-system)
   (set-frame-font "FreeMono-14"))
 
-;; Enable upcate region
+;; Enable up/down|case region
 (put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
 
 (provide 'basic)
 
